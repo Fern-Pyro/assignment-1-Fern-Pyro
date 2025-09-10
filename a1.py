@@ -49,7 +49,14 @@ PROBLEM 2: Conditionals
     "High School" if 14 <= age < 18,
     "College" otherwise.
 """
-#def grade_level(age: int) -> str :
+def grade_level(age: int): #-> str :
+    if age < 11:
+        return("")
+    elif 11<= age < 14:
+        return("") 
+    elif 14<= age < 18:
+        return("")
+
 
 
 """
