@@ -51,13 +51,13 @@ PROBLEM 2: Conditionals
 """
 def grade_level(age: int): #-> str :
     if age < 11:
-        return("")
+        return("Elementary")
     elif 11<= age < 14:
-        return("") 
+        return("Middle") 
     elif 14<= age < 18:
-        return("")
-
-
+        return("High School")
+    else:
+        return ("College")
 
 """
 🧪 Test Cases:
@@ -70,18 +70,27 @@ PROBLEM 3: Loops and Ranges
  Write a function sum_even_numbers(n) that returns the sum of all even numbers from 0 to n (inclusive).
 💡 Use a for loop and range()
  🧪 Example: sum_even_numbers(10) should return 30 (0+2+4+6+8+10)
+ """
 
+def sum_even_numbers(n: int):
+    total = 0
+    for i in range(n, -1):
+        if i/2:
+            total = total + i
+    return total
+
+"""
 PROBLEM 4: Lists and Slicing
- Given a list of test scores: scores = [88, 92, 79, 93, 85]
- Write Python code to: 
-    Print the last score, 
-    Print the top 3 scores, 
-    Add a new score 90, 
-    Sort the list in descending order.
- 🧪 Output should reflect proper list indexing, slicing, append(), and sort() usage.
+Given a list of test scores: scores = [88, 92, 79, 93, 85] 
+Write Python code to: 
+Print the last score,
+Print the top 3 scores,
+Add a new score 90, 
+Sort the list in descending order.
+🧪 Output should reflect proper list indexing, slicing, append(), and sort() usage.
 
 PROBLEM 5: Functions and String Manipulation
- Write a function reverse_words(sentence) that:
+Write a function reverse_words(sentence) that:
     Takes a string sentence,
     Splits it into words,
     Reverses the order of words,
@@ -117,10 +126,13 @@ print(f"is_even(7): {is_even(7)}")  # Should print False
 """
 
 print("Testing Problem 1:")
-# Add your tests here
+assert grade_level(10) == "Elementary", "grade_level of 10 failed"
+assert grade_level(13) == "Middle", "grade_level of 13 failed"
+assert grade_level(17) == "High School", "grade_level of 17 failed"
+assert grade_level(19) == "College", "grade_level of 19 failed"
 
 print("\nTesting Problem 2:")
-# Add your tests here
+assert sum_even_numbers(10) == 30, "sum_even_numbbers of 10 failed"
 
 print("\nTesting Problem 3:")
 # Add your tests here
