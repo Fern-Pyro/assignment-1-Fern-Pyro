@@ -74,9 +74,10 @@ PROBLEM 3: Loops and Ranges
 
 def sum_even_numbers(n: int):
     total = 0
-    for i in range(n, -1):
-        if i/2:
-            total = total + i
+    # for num in range(n+1):
+    #     total
+
+
     return total
 
 """
