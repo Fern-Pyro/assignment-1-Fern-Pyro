@@ -31,18 +31,7 @@ I have some experience with Java. Can you create 5-7 practice problems that cove
 # =============================================================================
 
 """
-PROBLEM 1: Variables & Types
- Write a Python program that declares the following:
-    A string variable name set to "Alice",
-    An integer age set to 17,
-    A float gpa set to 3.8,
-    A boolean is_honor_student set to True.
-
-Then, print all of them in a formatted sentence.
-🧪 Test: Output should be:
- "Alice is 17 years old, has a GPA of 3.8, and honor student status is True."
-
-PROBLEM 2: Conditionals
+PROBLEM 1: Conditionals
  Write a Python function grade_level(age) that returns:
     "Elementary" if age < 11,
     "Middle" if 11 <= age < 14,
@@ -66,7 +55,7 @@ def grade_level(age: int): #-> str :
  grade_level(17) → "High School"
  grade_level(19) → "College"
 
-PROBLEM 3: Loops and Ranges 
+PROBLEM 2: Loops and Ranges 
  Write a function sum_even_numbers(n) that returns the sum of all even numbers from 0 to n (inclusive).
 💡 Use a for loop and range()
  🧪 Example: sum_even_numbers(10) should return 30 (0+2+4+6+8+10)
@@ -74,14 +63,13 @@ PROBLEM 3: Loops and Ranges
 
 def sum_even_numbers(n: int):
     total = 0
-    # for num in range(n+1):
-    #     total
-
-
+    for num in range(n+1):
+        if num % 2 == 0:
+            total = total + num
     return total
 
 """
-PROBLEM 4: Lists and Slicing
+PROBLEM 3: Lists and Slicing
 Given a list of test scores: scores = [88, 92, 79, 93, 85] 
 Write Python code to: 
 Print the last score,
@@ -90,7 +78,11 @@ Add a new score 90,
 Sort the list in descending order.
 🧪 Output should reflect proper list indexing, slicing, append(), and sort() usage.
 
-PROBLEM 5: Functions and String Manipulation
+"""
+#def problem3(scores[])
+
+"""
+PROBLEM 4: Functions and String Manipulation
 Write a function reverse_words(sentence) that:
     Takes a string sentence,
     Splits it into words,
@@ -99,9 +91,7 @@ Write a function reverse_words(sentence) that:
 🧪 Example:
     reverse_words("I love Python") → "Python love I"
  
-PROBLEM 6: 
-    
-Example:
+PROBLEM 5: 
 Problem: Write a function called 'is_even' that takes an integer and returns 
 True if the number is even, False if it's odd.
 
@@ -109,7 +99,11 @@ Example inputs/outputs:
 - is_even(4) should return True
 - is_even(7) should return False
 """
-
+def is_even(n: int):
+    if n % 2 == 0:
+        return "true"
+    else:
+        return "false"
 # =============================================================================
 # PART 3: TESTING YOUR SOLUTIONS
 # =============================================================================
@@ -131,9 +125,13 @@ assert grade_level(10) == "Elementary", "grade_level of 10 failed"
 assert grade_level(13) == "Middle", "grade_level of 13 failed"
 assert grade_level(17) == "High School", "grade_level of 17 failed"
 assert grade_level(19) == "College", "grade_level of 19 failed"
+print("test passed!")
 
 print("\nTesting Problem 2:")
-assert sum_even_numbers(10) == 30, "sum_even_numbbers of 10 failed"
+assert sum_even_numbers(10) == 30, "sum_even_numbers of 10 failed"
+assert sum_even_numbers(4) == 6, "sum_even_numbers of 4 failed"
+assert sum_even_numbers(17) == 72, "sum_even_numbers of 17 failed"
+print("test passed!")
 
 print("\nTesting Problem 3:")
 # Add your tests here
@@ -142,6 +140,8 @@ print("\nTesting Problem 4:")
 # Add your tests here
 
 print("\nTesting Problem 5:")
-# Add your tests here
-
+assert is_even(10) == "true", "is_even of 10 failed"
+assert is_even(23) == "false", "is_even of 23 failed"
+assert is_even(150) == "true", "is_even of 150 failed"
+print("test passed!")
 
