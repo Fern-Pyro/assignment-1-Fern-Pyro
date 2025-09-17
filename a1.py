@@ -90,7 +90,16 @@ Write a function reverse_words(sentence) that:
     Returns the new sentence.
 🧪 Example:
     reverse_words("I love Python") → "Python love I"
- 
+"""
+def reverse_words(sentence: str):
+    words = sentence.split()
+    for num in range(0, len(words)):
+        if num == 0:
+            return num
+    # for item in reversed(words):
+    #     return(item)
+
+""" 
 PROBLEM 5: 
 Problem: Write a function called 'is_even' that takes an integer and returns 
 True if the number is even, False if it's odd.
@@ -137,7 +146,7 @@ print("\nTesting Problem 3:")
 # Add your tests here
 
 print("\nTesting Problem 4:")
-# Add your tests here
+assert reverse_words("I love Python") == "Pyrthon love I", "reverse_words of 'I love Python' failed"
 
 print("\nTesting Problem 5:")
 assert is_even(10) == "true", "is_even of 10 failed"
