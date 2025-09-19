@@ -79,8 +79,13 @@ Sort the list in descending order.
 🧪 Output should reflect proper list indexing, slicing, append(), and sort() usage.
 
 """
-#def problem3(scores[])
-
+#def top_scores (lst: List[int]):
+#   return(lst[len(lst)-1]) 
+student = {
+    "age": 17
+    "name": "Alice"
+    "grades": [90, 85, 92]     
+}
 """
 PROBLEM 4: Functions and String Manipulation
 Write a function reverse_words(sentence) that:
