@@ -79,8 +79,17 @@ Sort the list in descending order.
 🧪 Output should reflect proper list indexing, slicing, append(), and sort() usage.
 
 """
-#def top_scores (lst: List[int]):
-#   return(lst[len(lst)-1]) 
+def Arranging_scores (lst: List[int]):
+ print("Last Score: ", lst[len(lst)-1])
+ return(lst[len(lst)-1])
+ top3 = sort(lst, reverse = True)
+ top3 = top3[::3]
+ return top3
+ return lst.append(90)
+ return lst.sort(reverse = True)
+ 
+  
+ lst.expand(90)
 student = {
     "age": 17
     "name": "Alice"
@@ -148,7 +157,8 @@ assert sum_even_numbers(17) == 72, "sum_even_numbers of 17 failed"
 print("test passed!")
 
 print("\nTesting Problem 3:")
-# Add your tests here
+scores = [88, 92, 79, 93, 85]
+assert Arranging_scores(scores) == 85, "Arranding_scores of [88, 92, 79, 93, 85] failed"
 
 print("\nTesting Problem 4:")
 assert reverse_words("I love Python") == "Pyrthon love I", "reverse_words of 'I love Python' failed"
